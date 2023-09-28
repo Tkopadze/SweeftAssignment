@@ -46,9 +46,9 @@ namespace SweeftApiAbstractions.Services
                     // Generate a text file for each country in the wwwroot directory
                     foreach (var country in countries)
                     {
-                        string fileName = $"{country.Name}.txt";
+                        string fileName = $"{country.name.common}.txt";
                         string filePath = Path.Combine(wwwrootPath, fileName);
-                        string fileContent = $"Name: {country.Name}\nPopulation: {country.Population}\nCapital: {country.Capital}";
+                        string fileContent = $"Name: {country.name.common}\nPopulation: {country.population}\nregion: {country.region}";
 
                         File.WriteAllText(filePath, fileContent);
                     }

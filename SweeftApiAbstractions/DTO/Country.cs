@@ -8,8 +8,18 @@ namespace SweeftApiAbstractions.DTO
 {
     public class Country
     {
-        public string Name { get; set; }
-        public int Population { get; set; }
-        public string Capital { get; set; }
+        public string region { get; set; }
+        public string subregion { get; set; }
+        public int population { get; set; }
+        public Name name { get; set; }
+       
     }
+
+
+    public class Name
+    {
+        public string common { get; set; }
+    }
+
+
 }

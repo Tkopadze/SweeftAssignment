@@ -16,11 +16,11 @@ builder.Services.AddDbContext<DBContext>(options =>
 
 builder.Services.AddScoped<ITeachersService, TeachersService>();
 
-builder.Services.AddHttpClient<ICountryService, ICountryService>(options =>
+builder.Services.AddHttpClient<ICountryService, CountryService>(options =>
 {
     options.BaseAddress = new Uri(builder.Configuration["CountrisURI"]);
 });
-builder.Services.AddScoped<ICountryService, CountryService>();
+//builder.Services.AddScoped<ICountryService, CountryService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
